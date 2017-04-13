@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>test socket.io</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img src="logo.jpg" class="logo"/>
+    <img src="logo2.jpg" class="logo2"/>
+    <h1> Chat Game  ?</h1>
+    <div class="image">
+    <img src="fyth.jpg"/>
+    </div>
+    <form id="msgform" class="form">
+      <input type="text" name="message" placeholder="Taper votre message..." value="" class="btn"><br>
+    </form>
+    <ul id ="messages"></ul>
+    <div id="users">
+   <h2>Connectés</h2>
+   <ul></ul>
+ </div>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+
+
+</body>
+<footer><br/>
+<div class="footer">
+&copy; <?=date ("d.m.Y") ?> - H.COLIN
+</div>
+</footer>
+
+</html>

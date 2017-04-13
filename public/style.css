@@ -1,0 +1,78 @@
+/*
+Theme Name: ChatGame
+Theme URI: https://ChatGame
+Author: H.COLIN
+Author URI: https://H.COLIN
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+.btn{
+  border-radius:5px;
+  width: 800px;
+  color: white;
+  text-align:center;
+  height: 30px;
+  background-color:silver;
+
+}
+body{
+  background: blue;
+}
+h1 {
+  color: silver;
+  text-align: center;
+  font-family: Equal Sans Demo;
+  font-size:80px;
+  margin-left: 200px;
+}
+footer{
+  text-align:center;
+
+  color:blue;
+}
+.form{
+  text-align:center;
+
+}
+.container{
+  text-align:center;
+  border-radius:5px;
+  background-color:#4d4dff;
+  margin-left: 170px;
+  margin-right:170px;
+}
+
+.btn2{
+  border-radius:5px;
+  width: 200px;
+  color:grey;
+  width: 75px;
+}
+.image{
+  border-radius: 15px;
+  width: 1500px;
+  height: 200px;
+  text-align:center;
+
+}
+.logo{
+  position: absolute;
+  top: 5px;
+  left: 2px;
+  border-radius: 5px;
+  width: 200px;
+  height: 160px;
+  padding-left:  10px;
+  padding-top: 1px;
+}
+.logo2{
+  float: right;
+  border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  padding-right: 10px
+}
+ul{
+  border: 2px solid white;
+  width: 300px;
+  color:white;
+}
