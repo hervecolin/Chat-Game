@@ -28,7 +28,11 @@ io.on('connection', (socket) => {
   const user = {
     id: socket.id,
     // Nom au hasard dans la liste des noms par défaut
-    nickname: settings.defaultNicknames[Math.floor(Math.random() * settings.defaultNicknames.length)]
+    nickname: settings.defaultNicknames[Math.floor(Math.random() * settings.defaultNicknames.length)],
+    position: {
+      x: Math.random() * 100,
+      y: Math.random() * 100
+    }
   };
   users.push(user);
 
@@ -61,6 +65,11 @@ io.on('connection', (socket) => {
   // pour changer de pseudo
   socket.on('nick', (nickname) => {
     user.nickname = nickname;
+    io.emit('users', users);
+  });
+//recupérer d'un event "move" pour changer sa position
+  socket.on('move', (position) => {
+    user.position = position;
     io.emit('users', users);
   });
 

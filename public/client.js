@@ -58,7 +58,7 @@ socket.on('users', function(_users) {
       userDiv.innerText = user.nickname;
       document.body.appendChild(userDiv);
     }
-    user.position = {x: Math.random() * 100, y: Math.random() * 100};
+  
     userDiv.style.left = user.position.x + '%';
     userDiv.style.top = user.position.y + '%';
   }
@@ -91,3 +91,17 @@ msgform.addEventListener('submit', function(e) {
 
 // Autofocus sur le champ de texte
 msgform.message.focus();
+
+// Click n'importe où sur la page
+document.body.addEventListener('click', function(e) {
+  // On ne tient pas compte du click si on clique sur un <input>
+  if (e.target.tagName === 'INPUT') return;
+
+  // Calcul de la position de la souris en %
+  var position = {
+    x: e.clientX / window.innerWidth * 100,
+    y: e.clientY / window.innerHeight * 100
+  };
+  // Envoi de la nouvelle position au serveur
+  socket.emit('move', position);
+});
